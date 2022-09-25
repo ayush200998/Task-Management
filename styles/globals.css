@@ -6,21 +6,15 @@ body {
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 }
 
-a {
-  color: inherit;
-  text-decoration: none;
-}
+:root {
+  --radius-sm: 4px;
+  --radius-md: 6px;
+  --radius-lg: 8px;
 
-* {
-  box-sizing: border-box;
-}
+  --small: 4px;
+  --medium: 8px;
+  --large: 16px;
 
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
-  }
-  body {
-    color: white;
-    background: black;
-  }
+  --app-background-primary: #2E3440;
+  --app-text-primary: #D8DEE9;
 }
