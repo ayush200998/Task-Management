@@ -1,0 +1,3 @@
+export const NAVBAR_VIEW = {
+  AUTHENTICATED: 'AUTHENTICATED',
+};

@@ -1,14 +1,38 @@
 import React from 'react';
 import Image from 'next/image';
-import Logo from '../public/task_management_icon.png';
+import Logo from '../public/task_management_icon_3.jpg';
 import styles from '../styles/Home.module.css';
 // Chakra UI Components
-import { Heading } from '@chakra-ui/react';
+import {
+  Box, 
+  Button,
+  Heading,
+} from '@chakra-ui/react';
+// Constants
+import {
+  NAVBAR_VIEW
+} from '../constants/constants';
 
-const Navbar = () => {
+const Navbar = (props) => {
+  const { currentNavbarView } = props;
+  
+  const renderNavbarDetails = () => {
+    switch(currentNavbarView) {
+    case NAVBAR_VIEW.AUTHENTICATED:
+      return (
+        <Heading>
+            Authenticated
+        </Heading>
+      );
+
+    default:
+      return null;
+    }
+  };
+
   return (
-    <div className={styles.navbar_wrapper}>
-      <div className={styles.icon_container}>
+    <Box className={styles.navbar_wrapper}>
+      <Box className={styles.icon_container}>
         <Image 
           src={Logo}
           alt='logo'
@@ -19,8 +43,10 @@ const Navbar = () => {
         <Heading as='h2' size='md' style={{ marginLeft: '0.5rem' }}> 
             Task Manager
         </Heading>
-      </div>
-    </div>
+      </Box>
+
+      {renderNavbarDetails()}
+    </Box>
   );
 };
 

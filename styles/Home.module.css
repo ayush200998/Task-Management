@@ -1,8 +1,14 @@
 .card {
-  background-color: white;
+  background-color: var(--color-common-white);
   border-radius: var(--radius-md);
   box-shadow: 0px 3px 1px -2px rgb(0 0 0 / 20%), 0px 2px 2px rgb(0 0 0 / 14%), 0px 1px 5px rgb(0 0 0 / 12%);
-  padding: var(--large); 
+  padding: var(--large);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  min-width: 400px;
+  min-height: 300px;
 }
 
 .navbar_wrapper {
@@ -12,11 +18,21 @@
   height: 80px;
   color: var(--app-text-primary);
   padding: var(--large);
+  justify-content: space-between;
 }
 
 .icon_container {
   display: flex;
   align-items: center;
   cursor: pointer;
+}
+
+.signup_form_wrapper {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--app-text-primary);
 }
 
